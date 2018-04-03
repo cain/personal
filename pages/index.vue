@@ -1,56 +1,18 @@
 <template>
   <section class="container">
-    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-      <el-radio-button :label="false">expand</el-radio-button>
-      <el-radio-button :label="true">collapse</el-radio-button>
-    </el-radio-group>
-    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span slot="title">Navigator One</span>
-        </template>
-        <el-menu-item-group>
-          <span slot="title">Group One</span>
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item two</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group Two">
-          <el-menu-item index="1-3">item three</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <span slot="title">item four</span>
-          <el-menu-item index="1-4-1">item one</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">Navigator Two</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-setting"></i>
-        <span slot="title">Navigator Three</span>
-      </el-menu-item>
-    </el-menu>
-    <img src="~assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
-    <h1 class="title">
-      USERS
-    </h1>
-    <Button>Click me! </Button>
-    <ul class="users">
-      <li v-for="(user, index) in users" :key="index" class="user">
-        <nuxt-link :to="{ name: 'id', params: { id: index }}">
-          {{ user.name }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <h1>Cain Hall</h1>
+
+    <div id="scene">
+
+      <canvas height="4000" width="4000" data-depth="1"/>
+    </div>
   </section>
 </template>
 
 <script>
 import axios from '~/plugins/axios'
 import { Button, Select } from 'element-ui'
-
+import Parallax from 'parallax-js/dist/parallax.min.js'
 export default {
   components: {
     Button, Select
@@ -63,6 +25,74 @@ export default {
     return {
       title: 'Users'
     }
+  },
+  mounted () {
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault()
+    })
+    var c = document.getElementsByTagName('canvas')[0]
+
+    var x = c.getContext('2d')
+    var pr = window.devicePixelRatio || 1
+    var w = 2000
+    var h = 2000
+    var f = 90
+    var q
+    var m = Math
+    var r = 0
+    var u = m.PI * 2
+    var v = m.cos
+    var z = m.random
+    c.width = w * pr
+    c.height = h * pr
+    x.scale(pr, pr)
+    x.globalAlpha = 0.6
+    function i () {
+      x.clearRect(0, 0, w, h)
+      q = [{x: 0, y: h * 0.7 + f}, {x: 0, y: h * 0.7 - f}]
+      while (q[1].x < w + f) d(q[0], q[1])
+    }
+    function d (i, j) {
+      x.beginPath()
+      x.moveTo(i.x, i.y)
+      x.lineTo(j.x, j.y)
+      var k = j.x + (z() * 2 - 0.25) * f
+      var n = y(j.y)
+      x.lineTo(k, n)
+      x.closePath()
+      r -= u / -50
+      x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+      x.fill()
+      q[0] = q[1]
+      q[1] = {x: k, y: n}
+    }
+    function y (p) {
+      var t = p + (z() * 2 - 1.1) * f
+      return (t > h || t < 0) ? y(p) : t
+    }
+    document.onclick = i
+    document.ontouchstart = i
+    i()
+
+    var scene = document.getElementById('scene')
+    var parallaxInstance = new Parallax(scene)
+    parallaxInstance.friction(0.2, 0.2)
   }
 }
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+canvas, #scene {
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    z-index: 0;
+    width: 140%;
+    height: 140%;
+    pointer-events: none;
+    overflow: hidden
+}
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+</style>
