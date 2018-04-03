@@ -20,6 +20,7 @@ p {
 a {
   text-decoration: none;
   color: #000;
+  font-family: Georgia;  
 }
 
 a:hover {

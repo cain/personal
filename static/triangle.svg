@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="102px" viewBox="0 0 108 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-296.000000, -495.000000)">
+            <g id="Group" transform="translate(296.000000, 495.000000)">
+                <polygon id="Triangle" fill="#9B9B9B" points="59 0 108 98 10 98"></polygon>
+                <polygon id="Triangle" fill="#FFFFFF" transform="translate(47.071433, 78.071433) rotate(135.000000) translate(-47.071433, -78.071433) " points="47.0714334 44.7869036 80.3559632 111.355963 13.7869036 111.355963"></polygon>
+                <path d="M48.4024338,86.5975662 L94.5737259,40.4262741" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                <path d="M64.4829645,87.5170355 L93.8420216,58.1579784" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
