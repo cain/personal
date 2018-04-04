@@ -1,23 +1,32 @@
 <template>
   <section class="container">
-    <a class="site-link" href="#">cainhall.com.au</a>
-    <div class="section-banner">
-      <img src="/me.jpg" alt="me" class="banner-image" height="300px">
-      <div>
-        <h1 class="title">
-          Some Random Title
-        </h1>
-        <div class="line w40"></div>
-        <p class="sub-title">
-          Tumblr polaroid DIY tilde green juice bicycle rights. Farm-to-table vape lo-fi tote bag literally salvia. Taiyaki gluten-free roof party aesthetic slow-carb swag banh mi gentrify cronut bicycle rights. Green juice whatever microdosing shoreditch, tote bag slow-carb jianbing hashtag gentrify swag photo booth edison bulb.
-        </p>
+    <div class="side m-t-120">
+      <img src="/me.png" alt="me" class="banner-image" height="300px">      
+      <div class="section-nav">
+        <a href="#">home</a>
+        <a href="#">projects</a>
+        <a href="#">blog</a>
+        <a href="#">contact</a>
       </div>
     </div>
-    <div class="section-nav">
-      <a href="#">home</a>
-      <a href="#">projects</a>
-      <a href="#">blog</a>
-      <a href="#">contact</a>
+    <div class="main m-t-120">
+      <div class="section-banner">
+        <div class="">
+          <h1 class="title text-right">
+            Some Random Title 👋
+          </h1>
+          <div class="line w40 m-l-a"></div>
+          <p class="sub-title">
+            Tumblr polaroid DIY tilde green juice bicycle rights. Farm-to-table vape lo-fi tote bag literally salvia. Taiyaki gluten-free roof party aesthetic slow-carb swag banh mi gentrify cronut bicycle rights. Green juice whatever microdosing shoreditch, tote bag slow-carb jianbing hashtag gentrify swag photo booth edison bulb.
+          </p>
+        </div>
+      </div>
+
+      <div class="m-t-120">
+        <h1 class="title">
+          My Projects 
+        </h1>
+      </div>
     </div>
   </section>
 </template>
@@ -45,7 +54,17 @@ export default {
   height: 1px;
   width: 1px;
   background: black;
+}
+
+.m-l-a { 
   margin-left: auto;
+}
+.m-r-a { 
+  margin-right: auto;
+}
+
+.m-t-120 {
+  margin-top: 100px;
 }
 .w40 {
   width: 40%;
@@ -56,7 +75,7 @@ export default {
 .container {
   min-height: 400vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   max-width: 900px;
   margin: auto;
 }
@@ -107,9 +126,13 @@ export default {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: right;
+  text-align: left;
   color: #222222;
   margin: 6px 12px;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .subtitle {
