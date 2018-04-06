@@ -1,32 +1,31 @@
 <template>
   <section class="container">
     <div class="side m-t-120">
-      <img src="/me.png" alt="me" class="banner-image" height="300px">      
+      <img src="/me.png" alt="me" class="banner-image" height="250px">      
       <div class="section-nav">
-        <a href="#">home</a>
-        <a href="#">projects</a>
-        <a href="#">blog</a>
-        <a href="#">contact</a>
+        <a href="https://github.com/cainhall">code</a>        
+        <a href="https://www.linkedin.com/in/cainhall/">linkedin</a>
+        <a href="https://twitter.com/caintimothyhall">twitter</a>
+        <a href="mailto:cain.hall98@gmail.com">contact</a>
       </div>
     </div>
     <div class="main m-t-120">
       <div class="section-banner">
         <div class="">
           <h1 class="title text-right">
-            Some Random Title 👋
+            Cain Hall, Sydney
           </h1>
           <div class="line w40 m-l-a"></div>
           <p class="sub-title">
-            Tumblr polaroid DIY tilde green juice bicycle rights. Farm-to-table vape lo-fi tote bag literally salvia. Taiyaki gluten-free roof party aesthetic slow-carb swag banh mi gentrify cronut bicycle rights. Green juice whatever microdosing shoreditch, tote bag slow-carb jianbing hashtag gentrify swag photo booth edison bulb.
+            Extremely quick and continuous learner for modern development applications. It is my passion to deliver creative and powerful front-end applications, specialising in React Development.
           </p>
         </div>
       </div>
-
-      <div class="m-t-120">
+      <!-- <div class="m-t-120">
         <h1 class="title">
           My Projects 
         </h1>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -73,7 +72,6 @@ export default {
   margin-right: 12px;
 }
 .container {
-  min-height: 400vh;
   display: flex;
   flex-direction: row;
   max-width: 900px;
