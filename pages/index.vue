@@ -1,7 +1,12 @@
 <template>
   <section class="container">
     <div class="side m-t-120">
-      <img src="/me.png" alt="me" class="banner-image" height="250px">      
+      <div class="banner-image">
+        <div class="arrow-up"></div>
+        <div class="line line-1" style="width:60px"></div>
+        <div class="line line-2" style="width:60px"></div>      
+        <img src="/me.png" alt="me" class="" height="250px">        
+      </div>
       <div class="section-nav">
         <a href="https://github.com/cainhall">code</a>        
         <a href="https://www.linkedin.com/in/cainhall/">linkedin</a>
@@ -13,7 +18,7 @@
       <div class="section-banner">
         <div class="">
           <h1 class="title text-right">
-            Cain Hall, Sydney
+            Cain Hall
           </h1>
           <div class="line w40 m-l-a"></div>
           <p class="sub-title">
@@ -55,6 +60,32 @@ export default {
   background: black;
 }
 
+.line-1 {
+  transform: rotate(140deg);
+  position: absolute; 
+  bottom:60px;
+  left: -5px;
+}
+
+.line-2 {
+  transform: rotate(140deg);
+  position: absolute; 
+  bottom:45px;
+  left: -10px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  
+  border-bottom: 150px solid #fff;
+  position: absolute;
+  left: -140px;
+  bottom: 0px;
+}
+
 .m-l-a { 
   margin-left: auto;
 }
@@ -70,6 +101,7 @@ export default {
 }
 .banner-image {
   margin-right: 12px;
+  position: relative;
 }
 .container {
   display: flex;
