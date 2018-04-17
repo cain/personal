@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'My personal website' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { href: 'https://fonts.googleapis.com/css?family=Merriweather', rel: "stylesheet"}
     ]
   },
   /*

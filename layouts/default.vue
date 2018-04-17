@@ -22,8 +22,4 @@ a {
   color: #000;
   font-family: Georgia;  
 }
-
-a:hover {
-  text-decoration: underline;
-}
 </style>
